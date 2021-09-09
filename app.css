@@ -142,8 +142,8 @@ body {
 }
 
 .panel {
+  background-color: white;
   border-radius: 10px;
-  background-color: #fff;
   padding: 15px 25px;
   width: 100%;
   max-width: 960px;
@@ -156,12 +156,11 @@ body {
 .pricing-plan {
   border-bottom: 1px solid #e1f1ff;
 }
-
 .pricing-plan:last-child {
   border-bottom: none;
 }
 
-.pricing-image {
+.pricing-img {
   margin-bottom: 25px;
   max-width: 100%;
 }
@@ -193,8 +192,8 @@ body {
 .pricing-price {
   color: #016ff9;
   display: block;
-  font-weight: 700;
   font-size: 32px;
+  font-weight: 700;
 }
 
 .pricing-button {
@@ -209,7 +208,7 @@ body {
 }
 
 .pricing-button:hover,
-.pricing-button:active {
+.pricing-button:focus {
   background-color: #e1f1ff;
 }
 
@@ -219,7 +218,21 @@ body {
 }
 
 .pricing-button.is-featured:hover,
-.pricing-button.is-featured:active {
+.pricing-button.is-featured:focus {
   background-color: #269aff;
   color: white;
+}
+
+@media (min-width: 900px) {
+  .panel {
+    flex-direction: row;
+  }
+  .pricing-plan {
+    border-bottom: none;
+    border-right: 1px solid #e1f1ff;
+    padding: 25px 50px;
+  }
+  .pricing-plan:last-child {
+    border-right: none;
+  }
 }
